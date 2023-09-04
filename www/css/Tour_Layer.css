@@ -1,0 +1,115 @@
+
+.grid-container {
+  display: grid;
+  grid-template-areas:  'header header'
+                        'aside content'
+                        'footer footer';
+    grid-template-columns: 1fr 3fr auto; /* 1:3:1 비율로 변경 */
+  grid-template-rows:200px auto auto;
+
+  background-color: white;  
+  margin-bottom: 20px;  
+}
+
+nav {
+  grid-area: nav;
+  position: relative;
+}
+
+nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+nav li {
+  display: inline-block;
+  position: relative;
+  z-index: 2; /* li 요소에 우선순위를 부여 */
+}
+
+nav li:hover {
+  background-color: #ddd;
+}
+
+.grid-item {
+  padding: 10px;
+}
+
+.header {
+  grid-area: header;
+  background-image: url(img/korail/JoenbukTour/2.png);
+    background-size: 100% 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100%;
+    width:100%;
+}
+
+.aside {
+  grid-area: aside;
+  z-index: 1; /* li 요소에 우선순위를 부여 */
+}
+
+.content {
+  grid-area: content;
+  background-color: pink;
+    gap: 10px;
+}
+
+.footer {
+  grid-area: footer;
+  color: white;
+  background-color: #555;
+      position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+.gcontainer {
+  display: grid;
+  grid-template-columns: 40% 60%;
+  grid-template-rows: 80% 20%;
+  gap: 0px;
+  height: 400px;
+  justify-content: center;
+  margin-top: 20px;
+  border: 2px solid black;
+}
+
+.content-title {
+  grid-area: 1 / 2 / 2 / 3;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.content-text {
+  grid-area: 2 / 2 / 3 / 3;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.button {
+  grid-area: 2 / 2 / 3 / 3;
+  
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding: 10px;
+}
+
+.button a {
+  background-color: white;
+  border: 2px solid black;
+  color: black;
+  padding: 10px;
+  text-decoration: none;
+  font-size: 16px;
+}
+
+.button a:hover {
+  background-color: black;
+  color: white;
+}

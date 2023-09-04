@@ -1,0 +1,674 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Simplest jQuery Dropdown Nav Demo</title>
+    <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/font-awesome/4.6.2/css/font-awesome.min.css">
+    <link href="assets/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+    <script src="assets/js/jquery-2.2.3.min.js"></script>
+</head>
+
+
+
+<body>
+    <div class="logo"><a href="index.html">
+        <img src="logo.png" alt="로고">
+    </a>
+        
+    </div>
+    
+    <div class="search">
+        <input type="text" placeholder="검색어 입력">
+        <button>검색</button>
+    </div>
+            
+    <nav>
+        <div class="container">
+            <ul>
+                <li><a href="#">도내 운행 코스 <i class='fa fa-angle-down'></i></a><ul>
+                    <li><a href="drive.html">전체</a></li>
+                    <li><a href="drive.html">고창/부안</a></li>
+                    <li><a href="drive.html">무주/진안</a></li>
+                    <li><a href="drive.html">임실/진안</a></li>
+                    <li><a href="drive.html">장수/남원</a></li>
+                    <li><a href="drive.html">익산/완주</a></li>
+                    <li><a href="drive.html">정읍/김제</a></li>
+                    <li><a href="drive.html">임실/순창</a></li>
+                    <li><a href="drive.html">전주/군산</a></li>
+                    <li><a href="drive.html">전북투어패스</a></li>
+                    <li><a href="drive.html">새만금코스</a></li>
+    
+                </ul></li>
+      
+                <li> <a href="#">도내 특별 코스<i class='fa fa-angle-down'></i></a>
+                    <ul>
+                        <li><a href="special.html">전체</a></li>
+                        <li><a href="special.html">아태마스터스</a></li>
+                        <li><a href="special.html">MZ 코스</a></li>
+                        <li><a href="special.html">겨울 코스</a></li>
+                        <li><a href="special.html">실버 코스</a></li>
+                        <li><a href="special.html">축제&생태</a></li>
+    
+                    </ul>
+                </li>
+                <li class='sub-menu'> <a href="Gyeongsang_1and2.html">경상권 출발<i class='fa fa-angle-down'></i></a>
+                <ul>
+                    <li><a href="Gyeongsang_1and2.html">1박2일코스</a></li>
+                    <li><a href="Gyeongsang_OneDayTour.html">당일치기</a></li>
+                    <li><a href="Gyeongsang_SaemangeumTour.html">새만금</a></li>
+                </ul>
+                </li>
+            <li class='sub-menu'> <a href="Metropolitan_area_1and2.html">수도권 출발<i class='fa fa-angle-down'></i></a>
+                <ul>
+                    <li><a href="Metropolitan_area_1and2.html">1박2일</a></li>
+                    <li><a href="Metropolitan_area_OneDayTour.html">당일코스</a></li>
+                    <li><a href="Metropolitan_area_JoenbukTour.html">전북패스코스</a></li>
+                    <li><a href="Metropolitan_area_SaemangeumTour.html">새만금코스</a></li>
+
+                </ul>
+            </li>
+            <li class='sub-menu'> <a href="korail_1and2.html">코레일 연계<i class='fa fa-angle-down'></i></a>
+                <ul>
+                    <li><a href="korail_1and2.html">1박2일코스</a></li>
+                    <li><a href="korail_OneDayTour.html">당일코스</a></li>
+                    <li><a href="korail_JoenbukTour.html">전북패스코스</a></li>
+                    <li><a href="korail_SaemangeumTour.html">새만금</a></li>
+                </ul>
+            </li>
+                <li class='sub-menu'> <a href="#">커뮤니티<i class='fa fa-angle-down'></i></a>
+                    <ul>
+                        <li><a href="Community-not.html">공지사항</a></li>
+                        <li><a href="Community-not.html">자주 묻는 질문</a></li>
+                        <li><a href="Community--advertise.html">여행후기</a></li>
+                    
+                    </ul>
+                </li>
+                <li class='sub-menu'> <a href="#">홍보영상<i class='fa fa-angle-down'></i></a>
+                    <ul>
+                        <li><a href="Community--advertise.html">홍보영상</a></li>
+                      
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+<script src="http://code.jquery.com/jquery-1.12.4.min.js"></script>
+<script src="https://unpkg.com/@egjs/flicking/dist/flicking.pkgd.min.js" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="https://unpkg.com/@egjs/flicking/dist/flicking.css" crossorigin="anonymous" />
+
+<script>
+    $('nav li').hover(
+        function() {
+            $('ul', this).stop().slideDown(200);
+        },
+        function() {
+            $('ul', this).stop().slideUp(200);
+        }
+    );
+    const flicking = new Flicking("#carousel", {
+  align: "center",
+  circular: true,
+  bound: true,
+  renderOnlyVisible: true
+});
+</script>
+
+
+<style>
+
+    * {
+        font-family: 'AppleSDGothicNeoB';
+        text-size-adjust: 100%;
+        box-sizing: border-box;
+    }
+
+    #logo{
+        position: relative;
+        text-align:  left;
+        margin: 10 auto;
+        width: 60%;
+        border-radius: 20px;
+        border: 1px solid #bbb;
+        margin: 10px 0;
+        padding: 10px 12px;
+    }
+   .search {
+        position: relative;
+        text-align: center;
+        margin: 0 auto;
+    }
+    input {
+        width: 60%;
+        border-radius: 10px;
+        border: 1px solid #bbb;
+        margin: 10px 0;
+        padding: 10px 12px;
+    }
+    
+    @import url(https://fonts.googleapis.com/css?family=Roboto:400,700,500);
+
+    /* main Styles */
+
+    html { box-sizing: border-box; }
+
+    *, *:before, *:after { box-sizing: inherit; }
+
+    body {
+        background: #fafafa;
+        font-family: "Roboto", sans-serif;
+        font-size: 14px;
+        margin: 0;
+    }
+
+    a { text-decoration: none; }
+
+    .container {
+        width: 1000px;
+        margin: auto;
+    }
+
+    h1 { text-align:center; margin-top:150px;}
+
+    /* Navigation Styles */
+
+    nav { background: #2ba0db; z-index: 2; }
+
+    nav ul {
+        font-size: 0;
+        margin: 0;
+        padding: 0;
+    }
+
+    nav ul li {
+        display: inline-block;
+        position: relative;
+    }
+
+    nav ul li a {
+        color: #fff;
+        display: block;
+        font-size: 14px;
+        padding: 15px 14px;
+        transition: 0.3s linear;
+    }
+
+    nav ul li:hover { background: #126d9b; }
+
+    nav ul li ul {
+        border-bottom: 5px solid #2ba0db;
+        display: none;
+        position: absolute;
+        width: auto;
+        z-index: 5;
+    }
+
+    nav ul li ul li {
+        border-top: 1px solid #444;
+        display: block;
+    }
+
+    nav ul li ul li:first-child { border-top: none; }
+
+    nav ul li ul li a {
+        background: #373737;
+        display: block;
+        padding: 10px 14px;
+    }
+
+    nav ul li ul li a:hover { background: #126d9b; }
+
+    nav .fa.fa-angle-down { margin-left: 6px; }
+
+    .MainContainer {
+        width: 100%;
+        height: auto;
+        display: grid;
+        grid-template-columns: repeat( 2, 2fr);
+        z-index: 3;
+    }
+
+    .Title {
+        font-size: 1.4em;
+    width: auto;
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+    text-align: left;
+    color: rgb(0, 0, 0);
+    margin-bottom: 20px;
+    font-family: 'AppleSDGothicNeo';
+    }
+
+    .MainDrive_ProductTitleContainer {
+        
+    }
+
+    .MainSpecial_ProductTitleContainer {
+        
+    }
+
+    .MainDrive_ItemContainer {
+        width: 100%;
+        height: auto;
+        display: grid;
+        grid-template-columns: repeat( 2, 2fr);
+        margin-top: 10px;
+        gap: 20px;
+    }
+    .MainSpecial_ItemContainer {
+        width: 100%;
+        height: auto;
+        display: grid;
+        grid-template-columns: repeat( 2, 2fr);
+        margin-top: 10px;
+        gap: 20px;
+    }
+    .MainDrive_ProductContainer {
+        width: 100%;
+       height: auto;
+      padding: 20px 15% 5%;
+      min-height: 150px;
+      background-color: rgb(255, 255, 255);
+    }
+    .MainSpecial_ProductContainer {
+        width: 100%;
+       height: auto;
+      padding: 20px 15% 5%;
+      min-height: 150px;
+      background-color: rgb(255, 255, 255);
+    }
+
+    .Item {
+        width: 256px;
+       height: fit-content;
+
+      box-shadow: rgba(0, 0, 0, 0.2) 4px 4px 15px;
+    }
+
+    .imagecontainer {
+        width: 100%;
+    height: 226px;
+
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    position: relative;
+
+    }
+    .textcontainer {
+        width: 100%;
+    height: 110px;
+    display: flex;
+    flex-direction: column;
+    -webkit-box-pack: start;
+    font-family: 'AppleSDGothicNeo';
+    justify-content: flex-start;
+    padding: 10px;
+
+    }
+
+    .Review_Container {
+        width: 100%;
+       height: auto;
+      padding: 20px 15% 5%;
+      min-height: 150px;
+      background-color: rgb(255, 255, 255);
+    }
+
+    .Review_TitleContainer {
+        
+    }
+
+    .Review_ContentContainer {
+        width: 100%;
+        height: auto;
+        display: grid;
+        grid-template-columns: repeat( 4, 1fr);
+        gap: 20px;
+    }
+
+    @font-face {
+        font-family: 'AppleSDGothicNeo';
+        font-style: normal;
+        font-weight: 400;
+        src: url(AppleSDGothicNeoB.ttf) format('truetype');
+    }
+
+    .partner {
+        width: 100%;
+        height: 60px;
+        background-color: rgb(59, 117, 184);
+        display: flex;
+        -webkit-box-pack: start;
+        justify-content: flex-start;
+        -webkit-box-align: center;
+        align-items: center;
+        padding: 0px 15%;
+        -webkit-font-smoothing: antialiased;
+    margin: 0;
+    border: 0;
+    vertical-align: baseline;
+    }
+
+    .partner .title {
+        color: rgb(255, 255, 255);
+        font-size: 1.05em;
+        font-weight: bold;
+        white-space: nowrap;
+    }
+
+
+    .panel {
+        flex-shrink: 0;
+        width: 155px;
+        height: 35px;
+        background-color: rgb(255, 255, 255);
+        margin-right: 10px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: rgb(35, 35, 35);
+        overflow: hidden;
+    }
+
+    .panel img {
+        width: 100%;
+        height: 100%;
+        object-fit: scale-down;
+    }
+
+    .footer-container {
+    width: 100%;
+    display: flex;
+    -webkit-box-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    align-items: center;
+    padding: 30px 15%;
+}
+
+.footer-container .logo-container {
+    display: flex;
+    align-items: flex-start;
+    -webkit-box-pack: center;
+    justify-content: center;
+    flex-direction: column;
+    flex: 1 1 0%;
+}
+
+.footer-container .logo-container .footer-contents-container {
+    padding: 10px 0px 0px;
+    color: rgb(189, 189, 189);
+}
+
+.footer-container .footer-about-container {
+    color: rgb(0, 0, 0);
+    font-weight: bold;
+    font-size: 1.2em;
+}
+
+.footer-container .footer-about-container h4 {
+    font-size: 1.05em;
+    margin-bottom: 5px;
+}
+
+.footer-container .footer-about-container h3 {
+    font-size: 1.2em;
+}
+
+.hOIhoX {
+    flex: 1 1 0%;
+    padding: 0px 3%;
+    overflow: hidden;
+}
+
+</style>
+
+
+
+<div class="MainContainer">
+    <div class="MainDrive_ProductContainer">
+        <div class="MainDrive_ProductTitleContainer">
+            <div class="Title">
+                도내 여행 코스
+            </div>
+        </div>
+        <div class="MainDrive_ItemContainer">
+            <div class="Item">
+                <div class="imagecontainer">
+                    <a href="drive.html">
+                        <img src="MN001040.jpg" alt="" width="256" height="226">
+                    </a>
+                </div>
+                <div class="textcontainer">광한루원</div>
+            </div>
+            <div class="Item">
+                <div class="imagecontainer">
+                    <a href="drive.html">
+                        <img src="MN001038.jpg" alt="" width="256" height="226">
+                    </a>
+                </div>
+                <div class="textcontainer">적상산사고지</div>
+            </div>
+            <div class="Item">
+                <div class="imagecontainer">
+                    <a href="drive.html">
+                        <img src="MN001043.jpg" alt="" width="256" height="226">
+                    </a>
+                </div>
+                <div class="textcontainer">고추장마을</div>
+            </div>
+            <div class="Item">
+                <div class="imagecontainer">
+                    <a href="drive.html">
+                        <img src="MN002052.jpg" alt="" width="256" height="226">
+                    </a>
+                </div>
+                <div class="textcontainer">치유숲</div>
+            </div>
+        </div>
+    
+    </div>
+    
+    <div class="MainSpecial_ProductContainer">
+        <div class="MainDrive_ProductTitleContainer">
+            <div class="Title">
+                도내 특별 코스
+            </div>
+        </div>
+        <div class="MainSpecial_ItemContainer">
+            <div class="Item">
+                <div class="imagecontainer">
+                    <a href="special.html">
+                        <img src="MN002032.jpg" alt="" width="256" height="226">
+                    </a>
+                </div>
+                <div class="textcontainer">뜬봉샘생태공원</div>
+            </div>
+            <div class="Item">
+                <div class="imagecontainer">
+                    <a href="special.html">
+                        <img src="MN002047.jpg" alt="" width="256" height="226">
+                    </a>
+                </div>
+                <div class="textcontainer">붕어섬</div>
+            </div>
+            <div class="Item">
+                <div class="imagecontainer">
+                    <a href="special.html">
+                        <img src="MN002049.jpg" alt="" width="256" height="226">
+                    </a>
+                </div>
+                <div class="textcontainer">경암동철길마을</div>
+            </div>
+            <div class="Item">
+                <div class="imagecontainer">
+                    <a href="special.html">
+                        <img src="MN002057.jpg" alt="" width="256" height="226">
+                    </a>
+                </div>
+                <div class="textcontainer">선운산</div>
+            </div>
+        </div>
+    
+    </div>
+</div>
+<div class="Review_Container">
+    <div class="Review_Title">
+        <div class="Title">
+            여행후기
+        </div>
+    </div>
+    <div class="Review_ContentContainer">
+        <div class="Item">
+            <div class="imagecontainer">
+                <a href="Review.html">
+                    <img src="review_1671451911026_5-2.webp" alt="" width="256" height="226">
+                </a>
+            </div>
+            <div class="textcontainer">여행후기1</div>
+        </div>
+        <div class="Item">
+            <div class="imagecontainer">
+                <a href="Review.html">
+                    <img src="review_1679643570741_ACECBC.webp" alt="" width="256" height="226">
+                </a>
+            </div>
+            <div class="textcontainer">여행후기2</div>
+        </div>
+        <div class="Item">
+            <div class="imagecontainer">
+                <a href="Review.html">
+                    <img src="review_1677459437819.webp" alt="" width="256" height="226">
+                </a>
+            </div>
+            <div class="textcontainer">여행후기3</div>
+        </div>
+        <div class="Item">
+            <div class="imagecontainer">
+                <a href="Review.html">
+                    <img src="review_review_1678152479074_KakaoTalk_20230306_100013763.webp" alt="" width="256" height="226">
+                </a>
+            </div>
+            <div class="textcontainer">여행후기4</div>
+        </div>
+    </div>
+</div>
+
+
+
+</body>
+
+<footer class="LayoutStyles__FooterContainer-sc-iy7y4f-4 EulGN">
+    <section class="partner">
+        <p class="title">Family site</p>
+        <div class="LayoutStyles__FooterPartnerContainer-sc-iy7y4f-5 hOIhoX">
+            <div class="flicking-viewport" style="user-select: none; -webkit-user-drag: none; touch-action: pan-y;">
+                <div class="flicking-camera" style="transform: translate(-2640px);">
+                    <div class="panel">
+                        <img src="family/sponsor_1679274627498_자산 5.png">
+                    </div>
+                    <div class="panel">
+                        <img src="family/sponsor_1679274396424_진안군.jpg">
+                    </div>
+                    <div class="panel">
+                        <img src="family/sponsor_1679274347161_정읍시.jpg">
+                    </div>
+                    <div class="panel">
+                        <img src="family/sponsor_1679274313707_전주시.jpg">
+                    </div>
+                    <div class="panel">
+                        <img src="family/sponsor_1671523694133_20221220_165958.png">
+                    </div>
+                    <div class="panel">
+                        <img src="family/sponsor_1671523670270_20221220_165948.png">
+                    </div>
+                    <div class="panel">
+                        <img src="family/sponsor_1671523619775_20221220_165937.png">
+                    </div>
+                    <div class="panel">
+                        <img src="family/sponsor_1671523588474_완주군.jpg">
+                    </div>
+                    <div class="panel">
+                        <img src="family/sponsor_1671523563085_20221220_165904.png">
+                    </div>
+                    <div class="panel">
+                        <img src="family/sponsor_1671523543870_20221220_165853.png">
+                    </div>
+                    <div class="panel">
+                        <img src="family/sponsor_1671523466428_20221220_165840.png">
+                    </div>
+                    <div class="panel">
+                        <img src="family/sponsor_1671523430385_20221220_165829.png">
+                    </div>
+                    <div class="panel">
+                        <img src="family/sponsor_1671523352139_20221220_165819.png">
+                    </div>
+                    <div class="panel">
+                        <img src="family/sponsor_1671523321595_20221220_165809.png">
+                    </div>
+                    <div class="panel">
+                        <img src="family/sponsor_1671523297965_20221220_170110.png">
+                    </div>
+                    <div class="panel">
+                        <img src="family/sponsor_1670839890616_link4.png">
+                    </div>
+                    <div class="panel">
+                        <img src="family/sponsor_1670839867748_link3.png">
+                    </div>
+                    <div class="panel">
+                        <img src="family/sponsor_1670839850467_link2.png">
+                    </div>
+                    <div class="panel">
+                        <img src="family/sponsor_1669010656616_link1.png">
+                    </div>
+                    <div class="panel">
+                        <img src="family/sponsor_1679274956135_스카이항공 로고.png">
+                    </div>
+                    <div class="panel">
+                        <img src="family/sponsor_1679274896503_대지 1.png">
+                    </div>
+                    <div class="panel">
+                        <img src="family/sponsor_1679274783853_자산 1.png">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="footer-container">
+        <div class="logo-container">
+            <img class="logo" src="family/logo.png" alt="jbtour">
+            <div class="footer-contents-container">
+                <p>전라북도 전주시 덕진구 정언신로 95 경희프라자건물 7층</p>
+                <span>TEL.&nbsp;063-287-6292</span><span>FAX.&nbsp;063-288-6294</span>
+                <span style="word-break:keep-all">대표이사<!-- -->:&nbsp;조오익</span><br>
+                <span style="word-break:keep-all">사업자등록번호<!-- -->:&nbsp;<!-- -->418-82-04300 </span>
+                <span style="word-break:keep-all">통신판매업신고번호<!-- -->:&nbsp;<!-- -->제2017-전주덕진-0234호 </span><br>
+                <p>COPTRIGHT &nbsp;&nbsp; Jeollabuk-do Tourism Assiciation RIGHT RESERVED</p>
+            </div>
+        </div>
+        <div class="footer-about-container"><h4>전화문의</h4><h3>063-252-2988</h3>평일 09:00 - 18:00 (토/일/공휴일 휴무)
+        </div>
+    </section>
+</footer>
+<script>
+    const partnerContainer = document.querySelector('.LayoutStyles__FooterPartnerContainer-sc-iy7y4f-5');
+const camera = partnerContainer.querySelector('.flicking-camera');
+const panels = partnerContainer.querySelectorAll('.panel');
+const panelCount = panels.length;
+const panelWidth = panels[0].clientWidth;
+const duration = 3000; // ms
+
+let currentPanelIndex = 0;
+setInterval(() => {
+  currentPanelIndex = (currentPanelIndex + 1) % panelCount;
+  camera.style.transform = `translateX(-${currentPanelIndex * panelWidth}px)`;
+}, duration);
+</script>
+<style>
+    .flicking-camera {
+  display: flex;
+  transition: transform 0.5s ease-out;
+}
+</style>
+</html>

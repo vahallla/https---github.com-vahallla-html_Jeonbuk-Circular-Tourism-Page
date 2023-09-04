@@ -1,0 +1,707 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Simplest jQuery Dropdown Nav Demo</title>
+    <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/font-awesome/4.6.2/css/font-awesome.min.css">
+    <link href="css/style.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="css/Tour_img.css">
+    <link rel="stylesheet" type="text/css" href="css/Tour_Layer.css">
+        <link rel="stylesheet" type="text/css" href="css/side.css">
+    <style>
+		#header {
+			background-color:lightgrey;
+			height:100px;
+		}
+		#nav {
+			background-color:#339999;
+			color:white;
+			width:200px;
+			height:300px;
+			float:left;
+		}
+		#section {
+			width:400px;
+			text-align:left;
+			float:left;
+			padding:10px;
+		}
+        #aside{
+            	width:1000px;
+			text-align:right;
+			float:right;
+			padding:10px;
+        }
+		#footer {
+			background-color:#FFCC00;
+			height:100px;
+			clear:both;
+		}
+		#header, #nav, #section, #footer { text-align:center; }
+		#header, #footer { line-height:100px; }
+		#nav, #section { line-height:240px; }
+	</style>
+  
+</head>
+
+
+
+<body>
+    <div class="#top">
+     <div class="#top">
+           <div class="logo"><a href="index.html">
+        <img src="logo.png" alt="로고">
+    </a>
+        </div>
+        <div class="search">
+            <input type="text" placeholder="검색어 입력">
+           <button>검색</button>
+            <a href="login.html"> <button>로그인</button></a>
+            <a href="a?f.html"> <button>회원가입</button></a>
+        </div>
+    </div>
+            
+    <nav>
+        <div class="container">
+            <ul>
+                <li><a href="#">도내 운행 코스 <i class='fa fa-angle-down'></i></a><ul>
+                    <li><a href="drive.html">전체</a></li>
+                    <li><a href="drive.html">고창/부안</a></li>
+                    <li><a href="drive.html">무주/진안</a></li>
+                    <li><a href="drive.html">임실/진안</a></li>
+                    <li><a href="drive.html">장수/남원</a></li>
+                    <li><a href="drive.html">익산/완주</a></li>
+                    <li><a href="drive.html">정읍/김제</a></li>
+                    <li><a href="drive.html">임실/순창</a></li>
+                    <li><a href="drive.html">전주/군산</a></li>
+                    <li><a href="drive.html">전북투어패스</a></li>
+                    <li><a href="drive.html">새만금코스</a></li>
+    
+                </ul></li>
+      
+                <li> <a href="#">도내 특별 코스<i class='fa fa-angle-down'></i></a>
+                    <ul>
+                        <li><a href="special.html">전체</a></li>
+                        <li><a href="special.html">아태마스터스</a></li>
+                        <li><a href="special.html">MZ 코스</a></li>
+                        <li><a href="special.html">겨울 코스</a></li>
+                        <li><a href="special.html">실버 코스</a></li>
+                        <li><a href="special.html">축제&생태</a></li>
+    
+                    </ul>
+                </li>
+                <li class='sub-menu'> <a href="Gyeongsang_1and2.html">경상권 출발<i class='fa fa-angle-down'></i></a>
+                <ul>
+                    <li><a href="Gyeongsang_1and2.html">1박2일코스</a></li>
+                    <li><a href="Gyeongsang_OneDayTour.html">당일치기</a></li>
+                    <li><a href="Gyeongsang_SaemangeumTour.html">새만금</a></li>
+                </ul>
+                </li>
+            <li class='sub-menu'> <a href="Metropolitan_area_1and2.html">수도권 출발<i class='fa fa-angle-down'></i></a>
+                <ul>
+                    <li><a href="Metropolitan_area_1and2.html">1박2일</a></li>
+                    <li><a href="Metropolitan_area_OneDayTour.html">당일코스</a></li>
+                    <li><a href="Metropolitan_area_JoenbukTour.html">전북패스코스</a></li>
+                    <li><a href="Metropolitan_area_SaemangeumTour.html">새만금코스</a></li>
+
+                </ul>
+            </li>
+            <li class='sub-menu'> <a href="korail_1and2.html">코레일 연계<i class='fa fa-angle-down'></i></a>
+                <ul>
+                    <li><a href="korail_1and2.html">1박2일코스</a></li>
+                    <li><a href="korail_OneDayTour.html">당일코스</a></li>
+                    <li><a href="korail_JoenbukTour.html">전북패스코스</a></li>
+                    <li><a href="korail_SaemangeumTour.html">새만금</a></li>
+                </ul>
+            </li>
+                <li class='sub-menu'> <a href="#">커뮤니티<i class='fa fa-angle-down'></i></a>
+                    <ul>
+                        <li><a href="Community-not.html">공지사항</a></li>
+                        <li><a href="Community-not.html">자주 묻는 질문</a></li>
+                        <li><a href="Community--advertise.html">여행후기</a></li>
+                    
+                    </ul>
+                </li>
+                <li class='sub-menu'> <a href="#">홍보영상<i class='fa fa-angle-down'></i></a>
+                    <ul>
+                        <li><a href="Community--advertise.html">홍보영상</a></li>
+                      
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+<script src="http://code.jquery.com/jquery-1.12.4.min.js"></script>
+<script>
+    $('nav li').hover(
+        function() {
+            $('ul', this).stop().slideDown(200);
+        },
+        function() {
+            $('ul', this).stop().slideUp(200);
+        }
+    );
+</script>
+
+<div class="grid-container">
+    <div class="grid-item header"></div>
+  <div class="grid-item aside"> <div class="left_sub_menu">
+            <div class="sub_menu">
+                <input type="search" name="SEARCH" placeholder="SEARCH">
+                <h2><a href="index.html">TITLE</a></h2>
+                <ul class="big_menu">
+                    <li>도내 운행 코스 <i class="arrow fas fa-angle-right"></i></li>
+                    <ul class="small_menu">
+                        <li><a href="drive.html">전체</a></li>
+                        <li><a href="drive.html">고창/부안</a></li>
+                        <li><a href="drive.html">무주/진안</a></li>
+                        <li><a href="drive.html">임실/진안</a></li>
+                        <li><a href="drive.html">장수/남원</a></li>
+                        <li><a href="drive.html">익산/완주</a></li>
+                        <li><a href="drive.html">정읍/김제</a></li>
+                        <li><a href="drive.html">임실/순창</a></li>
+                        <li><a href="drive.html">전주/군산</a></li>
+                        <li><a href="drive.html">전북투어패스</a></li>
+                        <li><a href="drive.html">새만금코스</a></li>
+                    </ul>
+                </ul>
+                <ul class="big_menu">
+                    <li> 도내 특별 코스 <i class="arrow fas fa-angle-right"></i></li>
+                    <ul class="small_menu">
+                        <li><a href="special.html">전체</a></li>
+                        <li><a href="special.html">아태마스터스</a></li>
+                        <li><a href="special.html">MZ 코스</a></li>
+                        <li><a href="special.html">겨울 코스</a></li>
+                        <li><a href="special.html">실버 코스</a></li>
+                        <li><a href="special.html">축제&생태</a></li>
+                    </ul>
+                </ul>
+                <ul class="big_menu">
+                    <li>경상권 출발 <i class="arrow fas fa-angle-right"></i></li>
+                    <ul class="small_menu">
+                        <li><a href="Gyeongsang_1and2.html">1박2일코스</a></li>
+                        <li><a href="Gyeongsang_OneDayTour.html">당일코스</a></li>
+                        <li><a href="Gyeongsang_SaemangeumTour.html">새만금코스</a></li>
+                    </ul>
+                </ul>
+                <ul class="big_menu">
+                    <li>수도권 출발 <i class="arrow fas fa-angle-right"></i></li>
+                    <ul class="small_menu">
+                        <li><a href="Metropolitan_area_1and2.html">1박2일코스</a></li>
+                        <li><a href="Metropolitan_area_OneDayTour.html">당일코스</a></li>
+                        <li><a href="Metropolitan_area_JoenbukTour.html">전북투어패스</a></li>
+                        <li><a href="Metropolitan_area_SaemangeumTour.html">새만금코스</a></li>
+                    </ul>
+                </ul>
+                <ul class="big_menu">
+                    <li>코레일 연계 <i class="arrow fas fa-angle-right"></i></li>
+                    <ul class="small_menu">
+                        <li><a href="korail_1and2.html">1박2일코스</a></li>
+                        <li><a href="korail_OneDayTour.html">당일코스</a></li>
+                        <li><a href="korail_JoenbukTour.html">전북투어패스</a></li>
+                        <li><a href="korail_SaemangeumTour.html">새만금코스</a></li>
+                    </ul>
+                </ul>
+                <ul class="big_menu">
+                    <li>커뮤니티<i class="arrow fas fa-angle-right"></i></li>
+                    <ul class="small_menu">
+                        <li><a href="Community-not.html">공지사항</a></li>
+                        <li><a href="Community-not.html">자주 묻는 질문</a></li>
+                        <li><a href="Community--advertise.html">여행후기</a></li>
+                    </ul>
+                </ul>
+                <ul class="big_menu">
+                    <li> 홍보영상 <i class="arrow fas fa-angle-right"></i></li>
+                    <ul class="small_menu">
+                        <li><a href="Community--advertise.html">홍보영상</a></li>
+                        
+                    </ul>
+                </ul>
+                
+            </div>
+            
+        </div></div>
+  <div class="grid-item content">
+<!------------------------------------------------------->
+      <div style="background-color: whitesmoke">
+      <div class="gcontainer">
+          <div class="image" onmouseover="changeImage1()">
+            <img src="img/korail/Saemangum/1.png" alt="Left Image"> 
+          </div>
+        <div class="content-title">군산/ 부안<br>
+            첫째날<br><br>
+                용산역(07:22) – 군산역(10:45) - 군산근대화거리(이성당 빵집 개별자유방문) 및 자유중식(11:10) – 경암동철길거리(14:40) – 새만금33센터 – 새만금홍보관 - 숙소<br><br>
+            둘째날<br><br>
+                조식제공(08:00) - 내소사(09:30) – 중식제공(한식뷔페)(12:00) – 곰소항(13:30) – 줄포만갯벌생태공원(14:50) – 정읍역(16:30) - 용산역(18:31)</div>       
+          <div class="small-images">
+              <img src="img/korail/Saemangum/1.png" alt="Right Image 1" onmouseover="changeImage1()">
+
+          </div>
+        <div class="content-text">
+            
+          
+            <div class="button">
+            <a href="https://www.tour08.co.kr/home/goods_view/index.asp?ts=goods_day&strApart=A&strBpart=1&strCpart=1&goodsNum=4753" target="_blank">예약하기</a>
+            </div>
+          
+          </div>
+      </div>  
+          </div>
+
+      
+            <div style="background-color: whitesmoke">
+      <div class="gcontainer">
+          <div class="image1" onmouseover="changeImage2()">
+            <img src="img/korail/Saemangum/2.png" alt="Left Image"> 
+          </div>
+        <div class="content-title">김제/ 부안<br>
+            첫째날<br><br>
+                서울역(07:05) – 익산역(08:35) - 휘게팜(굿모닝티)(09:30) – 벽골제마을(우리쌀쿠키만들기 및 중식제공)(11:30) - 아리랑문학마을(13:10) – 김제지평선축제장(14:30) - 숙소 및 자유석식(17:20)<br><br>
+            둘째날<br><br>
+                조식제공(07:30) - 새만금33센터(10:00) - 새만금홍보관(10:40) – 채석강&격포해수욕장(12:00) – 곰소항 자유중식(13:00) – 내소사(14:10) – 정읍역(17:00) - 용산역(20:13)</div>       
+          <div class="small-images1">
+              <img src="img/korail/Saemangum/2.png"Gyeongsang_1and2.html alt="Right Image 1" onmouseover="changeImage2()">
+
+          </div>
+        <div class="content-text">
+            
+          
+            <div class="button">
+            <a href="https://www.tour08.co.kr/home/goods_view/index.asp?ts=goods_day&strApart=C&strBpart=1&strCpart=1&goodsNum=5186" target="_blank">예약하기</a>
+            </div>
+          
+          </div>
+      </div>  
+          </div>
+      
+      <script>
+          
+          $(function () {
+        // 왼쪽메뉴 드롭다운
+        $(".sub_menu ul.small_menu").hide();
+        $(".sub_menu ul.big_menu").click(function () {
+            $("ul", this).slideToggle(300);
+        });
+        // 외부 클릭 시 좌측 사이드 메뉴 숨기기
+        $('.overlay').on('click', function () {
+            $('.left_sub_menu').fadeOut();
+            $('.hide_sidemenu').fadeIn();
+        });
+    });
+          
+  function changeImage1() {
+    var leftImage = document.querySelector(".image img");
+    var rightImages = document.querySelectorAll(".small-images img");
+    for (var i = 0; i < rightImages.length; i++) {
+      rightImages[i].onmouseover = function() {
+        leftImage.src = this.src;
+      }
+    }
+  }
+            function changeImage2() {
+    var leftImage = document.querySelector(".image1 img");
+    var rightImages = document.querySelectorAll(".small-images1 img");
+    for (var i = 0; i < rightImages.length; i++) {
+      rightImages[i].onmouseover = function() {
+        leftImage.src = this.src;
+      }
+    }
+  }
+</script>
+      
+    </div> 
+
+    </div>
+</body>
+<footer class="LayoutStyles__FooterContainer-sc-iy7y4f-4 EulGN">
+    <section class="partner">
+        <p class="title">Family site</p>
+        <div class="LayoutStyles__FooterPartnerContainer-sc-iy7y4f-5 hOIhoX">
+            <div class="flicking-viewport" style="user-select: none; -webkit-user-drag: none; touch-action: pan-y;">
+                <div class="flicking-camera" style="transform: translate(-2640px);">
+                    <div class="panel">
+                        <img src="family/sponsor_1679274627498_자산 5.png">
+                    </div>
+                    <div class="panel">
+                        <img src="family/sponsor_1679274396424_진안군.jpg">
+                    </div>
+                    <div class="panel">
+                        <img src="family/sponsor_1679274347161_정읍시.jpg">
+                    </div>
+                    <div class="panel">
+                        <img src="family/sponsor_1679274313707_전주시.jpg">
+                    </div>
+                    <div class="panel">
+                        <img src="family/sponsor_1671523694133_20221220_165958.png">
+                    </div>
+                    <div class="panel">
+                        <img src="family/sponsor_1671523670270_20221220_165948.png">
+                    </div>
+                    <div class="panel">
+                        <img src="family/sponsor_1671523619775_20221220_165937.png">
+                    </div>
+                    <div class="panel">
+                        <img src="family/sponsor_1671523588474_완주군.jpg">
+                    </div>
+                    <div class="panel">
+                        <img src="family/sponsor_1671523563085_20221220_165904.png">
+                    </div>
+                    <div class="panel">
+                        <img src="family/sponsor_1671523543870_20221220_165853.png">
+                    </div>
+                    <div class="panel">
+                        <img src="family/sponsor_1671523466428_20221220_165840.png">
+                    </div>
+                    <div class="panel">
+                        <img src="family/sponsor_1671523430385_20221220_165829.png">
+                    </div>
+                    <div class="panel">
+                        <img src="family/sponsor_1671523352139_20221220_165819.png">
+                    </div>
+                    <div class="panel">
+                        <img src="family/sponsor_1671523321595_20221220_165809.png">
+                    </div>
+                    <div class="panel">
+                        <img src="family/sponsor_1671523297965_20221220_170110.png">
+                    </div>
+                    <div class="panel">
+                        <img src="family/sponsor_1670839890616_link4.png">
+                    </div>
+                    <div class="panel">
+                        <img src="family/sponsor_1670839867748_link3.png">
+                    </div>
+                    <div class="panel">
+                        <img src="family/sponsor_1670839850467_link2.png">
+                    </div>
+                    <div class="panel">
+                        <img src="family/sponsor_1669010656616_link1.png">
+                    </div>
+                    <div class="panel">
+                        <img src="family/sponsor_1679274956135_스카이항공 로고.png">
+                    </div>
+                    <div class="panel">
+                        <img src="family/sponsor_1679274896503_대지 1.png">
+                    </div>
+                    <div class="panel">
+                        <img src="family/sponsor_1679274783853_자산 1.png">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="footer-container">
+        <div class="logo-container">
+            <img class="logo" src="family/logo.png" alt="jbtour">
+            <div class="footer-contents-container">
+                <p>전라북도 전주시 덕진구 정언신로 95 경희프라자건물 7층</p>
+                <span>TEL.&nbsp;063-287-6292</span><span>FAX.&nbsp;063-288-6294</span>
+                <span style="word-break:keep-all">대표이사<!-- -->:&nbsp;조오익</span><br>
+                <span style="word-break:keep-all">사업자등록번호<!-- -->:&nbsp;<!-- -->418-82-04300 </span>
+                <span style="word-break:keep-all">통신판매업신고번호<!-- -->:&nbsp;<!-- -->제2017-전주덕진-0234호 </span><br>
+                <p>COPTRIGHT &nbsp;&nbsp; Jeollabuk-do Tourism Assiciation RIGHT RESERVED</p>
+            </div>
+        </div>
+        <div class="footer-about-container"><h4>전화문의</h4><h3>063-252-2988</h3>평일 09:00 - 18:00 (토/일/공휴일 휴무)
+        </div>
+    </section>
+</footer>
+<script>
+    const partnerContainer = document.querySelector('.LayoutStyles__FooterPartnerContainer-sc-iy7y4f-5');
+const camera = partnerContainer.querySelector('.flicking-camera');
+const panels = partnerContainer.querySelectorAll('.panel');
+const panelCount = panels.length;
+const panelWidth = panels[0].clientWidth;
+const duration = 3000; // ms
+
+let currentPanelIndex = 0;
+setInterval(() => {
+  currentPanelIndex = (currentPanelIndex + 1) % panelCount;
+  camera.style.transform = `translateX(-${currentPanelIndex * panelWidth}px)`;
+}, duration);
+</script>
+<style>
+    .flicking-camera {
+  display: flex;
+  transition: transform 0.5s ease-out;
+}
+.partner {
+        width: 100%;
+        height: 60px;
+        background-color: rgb(59, 117, 184);
+        display: flex;
+        -webkit-box-pack: start;
+        justify-content: flex-start;
+        -webkit-box-align: center;
+        align-items: center;
+        padding: 0px 15%;
+        -webkit-font-smoothing: antialiased;
+    margin: 0;
+    border: 0;
+    vertical-align: baseline;
+    }
+
+    .partner .title {
+        color: rgb(255, 255, 255);
+        font-size: 1.05em;
+        font-weight: bold;
+        white-space: nowrap;
+    }
+
+
+    .panel {
+        flex-shrink: 0;
+        width: 155px;
+        height: 35px;
+        background-color: rgb(255, 255, 255);
+        margin-right: 10px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: rgb(35, 35, 35);
+        overflow: hidden;
+    }
+
+    .panel img {
+        width: 100%;
+        height: 100%;
+        object-fit: scale-down;
+    }
+
+    .footer-container {
+    width: 100%;
+    display: flex;
+    -webkit-box-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    align-items: center;
+    padding: 30px 15%;
+}
+
+.footer-container .logo-container {
+    display: flex;
+    align-items: flex-start;
+    -webkit-box-pack: center;
+    justify-content: center;
+    flex-direction: column;
+    flex: 1 1 0%;
+}
+
+.footer-container .logo-container .footer-contents-container {
+    padding: 10px 0px 0px;
+    color: rgb(189, 189, 189);
+}
+
+.footer-container .footer-about-container {
+    color: rgb(0, 0, 0);
+    font-weight: bold;
+    font-size: 1.2em;
+}
+
+.footer-container .footer-about-container h4 {
+    font-size: 1.05em;
+    margin-bottom: 5px;
+}
+
+.footer-container .footer-about-container h3 {
+    font-size: 1.2em;
+}
+
+.hOIhoX {
+    flex: 1 1 0%;
+    padding: 0px 3%;
+    overflow: hidden;
+}
+@keyframes spin {
+    to {
+        transform: rotate(1turn)
+    }
+}
+
+@keyframes loader2-1 {
+    0% {
+        transform: scale(1);
+        opacity: 1
+    }
+
+    50% {
+        transform: scale(1.3);
+        opacity: 0
+    }
+
+    to {
+        transform: scale(1.3);
+        opacity: 0
+    }
+}
+
+@keyframes loader2-2 {
+    0% {
+        transform: scale(1)
+    }
+
+    50% {
+        transform: scale(.7)
+    }
+
+    to {
+        transform: scale(1)
+    }
+}
+
+    .flicking-viewport.vertical {
+        display: inline-flex
+    }
+
+    .flicking-viewport.vertical>.flicking-camera {
+        display: inline-flex;
+        flex-direction: column
+    }
+
+    .flicking-camera {
+        display: flex;
+        flex-direction: row
+    }
+
+    .flicking-camera>* {
+        flex-shrink: 0
+    }
+
+    .flicking-viewport {
+        position: relative;
+        overflow: hidden
+    }
+
+    .flicking-viewport:not(.vertical) {
+        width: 100%;
+        height: 100%
+    }
+
+    .flicking-viewport.vertical,.flicking-viewport.vertical>.flicking-camera {
+        display: inline-block
+    }
+
+    .flicking-viewport.vertical.middle>.flicking-camera>* {
+        vertical-align: middle
+    }
+
+    .flicking-viewport.vertical.bottom>.flicking-camera>* {
+        vertical-align: bottom
+    }
+
+    .flicking-viewport.vertical>.flicking-camera>* {
+        display: block
+    }
+
+    .flicking-viewport.flicking-hidden>.flicking-camera>* {
+        visibility: hidden
+    }
+
+    .flicking-camera {
+        width: 100%;
+        height: 100%;
+        position: relative;
+        z-index: 1;
+        white-space: nowrap;
+        will-change: transform
+    }
+
+    .flicking-camera>* {
+        display: inline-block;
+        white-space: normal;
+        vertical-align: top
+    }
+
+    .flicking-arrow-next,.flicking-arrow-prev {
+        position: absolute;
+        top: 50%;
+        width: 64px;
+        height: 64px;
+        cursor: pointer;
+        transform: translateY(-50%);
+        z-index: 2
+    }
+
+    .flicking-arrow-next.is-circle,.flicking-arrow-prev.is-circle {
+        background-color: #f2a65e;
+        border-radius: 50%
+    }
+
+    .flicking-arrow-disabled.is-circle {
+        background-color: hsla(0,0%,4%,.1)
+    }
+
+    .flicking-arrow-next.is-circle:after,.flicking-arrow-next.is-circle:before,.flicking-arrow-prev.is-circle:after,.flicking-arrow-prev.is-circle:before {
+        background-color: #fff
+    }
+
+    .flicking-arrow-prev {
+        left: 10px
+    }
+
+    .flicking-arrow-next {
+        right: 10px
+    }
+
+    .flicking-arrow-prev.is-outside {
+        left: -74px
+    }
+
+    .flicking-arrow-next.is-outside {
+        right: -74px
+    }
+
+    .flicking-arrow-next:after,.flicking-arrow-next:before,.flicking-arrow-prev:after,.flicking-arrow-prev:before {
+        content: "";
+        width: 24px;
+        height: 6px;
+        position: absolute;
+        background-color: #f2a65e
+    }
+
+    .flicking-arrow-prev:before {
+        top: 50%;
+        left: 22px;
+        transform: rotate(-45deg);
+        transform-origin: 0 50%
+    }
+
+    .flicking-arrow-prev:after {
+        top: calc(50% - 4px);
+        left: 22px;
+        transform: rotate(45deg);
+        transform-origin: 0 50%
+    }
+
+    .flicking-arrow-next:before {
+        top: 50%;
+        right: 22px;
+        transform: rotate(45deg);
+        transform-origin: 100% 50%
+    }
+
+    .flicking-arrow-next:after {
+        top: calc(50% - 4px);
+        right: 22px;
+        transform: rotate(-45deg);
+        transform-origin: 100% 50%
+    }
+
+    .flicking-arrow-disabled {
+        cursor: default
+    }
+
+    .flicking-arrow-disabled:after,.flicking-arrow-disabled:before {
+        background-color: #e6e6e6
+    }
+
+    .flicking-arrow-next.is-thin:after,.flicking-arrow-next.is-thin:before,.flicking-arrow-prev.is-thin:after,.flicking-arrow-prev.is-thin:before {
+        height: 3px
+    }
+
+    .flicking-arrow-next.is-thin:after,.flicking-arrow-prev.is-thin:after {
+        top: calc(50% - 2px)
+    }
+
+</style>
+</html>

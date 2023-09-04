@@ -1,0 +1,492 @@
+
+.image {
+  grid-area: 1 / 1 / 2 / 2;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid black;  
+}
+
+.image img {
+  width: auto;
+  height: auto;
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.small-images {
+  grid-area: 2 / 1 / 3 / 2;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+ border: 2px solid black;
+}
+
+.small-images img {
+width: auto;
+  height: auto;
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.image1 {
+  grid-area: 1 / 1 / 2 / 2;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+   border: 2px solid black;  
+}
+
+.image1 img {
+  width: auto;
+  height: auto;
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.small-images1 {
+  grid-area: 2 / 1 / 3 / 2;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+ border: 2px solid black;
+}
+
+.small-images1 img {
+width: auto;
+  height: auto;
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.image2 {
+  grid-area: 1 / 1 / 2 / 2;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+   border: 2px solid black;  
+}
+
+.image2 img {
+  width: auto;
+  height: auto;
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.small-images2 {
+  grid-area: 2 / 1 / 3 / 2;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+ border: 2px solid black;
+}
+
+.small-images2 img {
+width: auto;
+  height: auto;
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.image3 {
+  grid-area: 1 / 1 / 2 / 2;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+   border: 2px solid black;  
+}
+
+.image3 img {
+  width: auto;
+  height: auto;
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.small-images3 {
+  grid-area: 2 / 1 / 3 / 2;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+ border: 2px solid black;
+}
+
+.small-images3 img {
+width: auto;
+  height: auto;
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.image4 {
+  grid-area: 1 / 1 / 2 / 2;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+   border: 2px solid black;  
+}
+
+.image4 img {
+  width: auto;
+  height: auto;
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.small-images4 {
+  grid-area: 2 / 1 / 3 / 2;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+ border: 2px solid black;
+}
+
+.small-images4 img {
+width: auto;
+  height: auto;
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.image5 {
+  grid-area: 1 / 1 / 2 / 2;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+   border: 2px solid black;  
+}
+
+.image5 img {
+  width: auto;
+  height: auto;
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.small-images5 {
+  grid-area: 2 / 1 / 3 / 2;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+ border: 2px solid black;
+}
+
+.small-images5 img {
+width: auto;
+  height: auto;
+  max-width: 100%;
+  max-height: 100%;
+}
+.image6 {
+  grid-area: 1 / 1 / 2 / 2;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+   border: 2px solid black;  
+}
+
+.image6 img {
+  width: auto;
+  height: auto;
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.small-images6 {
+  grid-area: 2 / 1 / 3 / 2;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+ border: 2px solid black;
+}
+
+.small-images6 img {
+width: auto;
+  height: auto;
+  max-width: 100%;
+  max-height: 100%;
+}
+.image7 {
+  grid-area: 1 / 1 / 2 / 2;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+   border: 2px solid black;  
+}
+
+.image7 img {
+  width: auto;
+  height: auto;
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.small-images7 {
+  grid-area: 2 / 1 / 3 / 2;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+ border: 2px solid black;
+}
+
+.small-images7 img {
+width: auto;
+  height: auto;
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.image8 {
+  grid-area: 1 / 1 / 2 / 2;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+   border: 2px solid black;  
+}
+
+.image8 img {
+  width: auto;
+  height: auto;
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.small-images8 {
+  grid-area: 2 / 1 / 3 / 2;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+ border: 2px solid black;
+}
+
+.small-images8 img {
+width: auto;
+  height: auto;
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.image9 {
+  grid-area: 1 / 1 / 2 / 2;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+   border: 2px solid black;  
+}
+
+.image9 img {
+  width: auto;
+  height: auto;
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.small-images9 {
+  grid-area: 2 / 1 / 3 / 2;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+ border: 2px solid black;
+}
+
+.small-images9 img {
+width: auto;
+  height: auto;
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.image10 {
+  grid-area: 1 / 1 / 2 / 2;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+   border: 2px solid black;  
+}
+
+.image10 img {
+  width: auto;
+  height: auto;
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.small-images10 {
+  grid-area: 2 / 1 / 3 / 2;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+ border: 2px solid black;
+}
+
+.small-images10 img {
+width: auto;
+  height: auto;
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.image11 {
+  grid-area: 1 / 1 / 2 / 2;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+   border: 2px solid black;  
+}
+
+.image11 img {
+  width: auto;
+  height: auto;
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.small-images11 {
+  grid-area: 2 / 1 / 3 / 2;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+ border: 2px solid black;
+}
+
+.small-images11 img {
+width: auto;
+  height: auto;
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.image12 {
+  grid-area: 1 / 1 / 2 / 2;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+   border: 2px solid black;  
+}
+
+.image12 img {
+  width: auto;
+  height: auto;
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.small-images12 {
+  grid-area: 2 / 1 / 3 / 2;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+ border: 2px solid black;
+}
+
+.small-images12 img {
+width: auto;
+  height: auto;
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.image13 {
+  grid-area: 1 / 1 / 2 / 2;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+   border: 2px solid black;  
+}
+
+.image13 img {
+  width: auto;
+  height: auto;
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.small-images13 {
+  grid-area: 2 / 1 / 3 / 2;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+ border: 2px solid black;
+}
+
+.small-images13 img {
+width: auto;
+  height: auto;
+  max-width: 100%;
+  max-height: 100%;
+}
+.image14 {
+  grid-area: 1 / 1 / 2 / 2;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+   border: 2px solid black;  
+}
+
+.image14 img {
+  width: auto;
+  height: auto;
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.small-images14 {
+  grid-area: 2 / 1 / 3 / 2;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+ border: 2px solid black;
+}
+
+.small-images14 img {
+width: auto;
+  height: auto;
+  max-width: 100%;
+  max-height: 100%;
+}
+.image15 {
+  grid-area: 1 / 1 / 2 / 2;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+   border: 2px solid black;  
+}
+
+.image15 img {
+  width: auto;
+  height: auto;
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.small-images15 {
+  grid-area: 2 / 1 / 3 / 2;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+ border: 2px solid black;
+}
+
+.small-images15 img {
+width: auto;
+  height: auto;
+  max-width: 100%;
+  max-height: 100%;
+}

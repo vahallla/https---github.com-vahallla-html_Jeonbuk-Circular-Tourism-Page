@@ -1,0 +1,461 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Simplest jQuery Dropdown Nav Demo</title>
+    <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/font-awesome/4.6.2/css/font-awesome.min.css">
+    <link href="css/style.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="css/Tour_img.css">
+    <link rel="stylesheet" type="text/css" href="css/Tour_Layer.css">
+     <link rel="stylesheet" type="text/css" href="css/side.css">
+    <style>
+		#header {
+			background-color:lightgrey;
+			height:100px;
+		}
+		#nav {
+			background-color:#339999;
+			color:white;
+			width:200px;
+			height:300px;
+			float:left;
+		}
+		#section {
+			width:400px;
+			text-align:left;
+			float:left;
+			padding:10px;
+		}
+        #aside{
+            	width:1000px;
+			text-align:right;
+			float:right;
+			padding:10px;
+        }
+		#footer {
+			background-color:#FFCC00;
+			height:100px;
+			clear:both;
+		}
+		#header, #nav, #section, #footer { text-align:center; }
+		#header, #footer { line-height:100px; }
+		#nav, #section { line-height:240px; }
+	</style>
+  
+</head>
+
+
+
+<body>
+    <div class="#top">
+        <div class="logo">
+            <img src="logo.png" alt="로고">
+            <a herf="main.html"></a>
+        </div>
+    
+        <div class="search">
+            <input type="text" placeholder="검색어 입력">
+           <button>검색</button>
+            <a href="login.html"> <button>로그인</button></a>
+            <a href="a?f.html"> <button>회원가입</button></a>
+        </div>
+    </div>
+            
+<nav>
+    <div class="container">
+        <ul>
+<li><a href="#">도내 운행 코스 <i class='fa fa-angle-down'></i></a><ul>
+                    <li><a href="#">전체</a></li>
+                    <li><a href="#">고창/부안</a></li>
+                    <li><a href="#">무주/진안</a></li>
+                    <li><a href="#">임실/진안</a></li>
+                    <li><a href="#">장수/남원</a></li>
+                    <li><a href="#">익산/완주</a></li>
+                    <li><a href="#">정읍/김제</a></li>
+                    <li><a href="#">임실/순창</a></li>
+                    <li><a href="#">전주/군산</a></li>
+                    <li><a href="#">전북투어패스</a></li>
+                    <li><a href="#">새만금코스</a></li>
+    
+                </ul></li>
+      
+                <li> <a href="#">도내 특별 코스<i class='fa fa-angle-down'></i></a>
+                    <ul>
+                        <li><a href="#">전체</a></li>
+                        <li><a href="#">아태마스터스</a></li>
+                        <li><a href="#">MZ 코스</a></li>
+                        <li><a href="#">겨울 코스</a></li>
+                        <li><a href="#">실버 코스</a></li>
+                        <li><a href="#">축제&생태</a></li>
+    
+                    </ul>
+                </li>
+            <li class='sub-menu'> <a href="Gyeongsang_1and2.html">경상권 출발<i class='fa fa-angle-down'></i></a>
+                <ul>
+                    <li><a href="Gyeongsang_1and2.html">1박2일코스</a></li>
+                    <li><a href="Gyeongsang_OneDayTour.html">당일치기</a></li>
+                    <li><a href="Gyeongsang_SaemangeumTour.html">새만금</a></li>
+                </ul>
+            </li>
+            <li class='sub-menu'> <a href="Metropolitan_area_1and2.html">수도권 출발<i class='fa fa-angle-down'></i></a>
+                <ul>
+                    <li><a href="Metropolitan_area_1and2.html">1박2일</a></li>
+                    <li><a href="Metropolitan_area_OneDayTour.html">당일코스</a></li>
+                    <li><a href="Metropolitan_area_JoenbukTour.html">전북패스코스</a></li>
+                    <li><a href="Metropolitan_area_SaemangeumTour.html">새만금코스</a></li>
+
+                </ul>
+            </li>
+            <li class='sub-menu'> <a href="korail_1and2.html">코레일 연계<i class='fa fa-angle-down'></i></a>
+                <ul>
+                    <li><a href="korail_1and2.html">1박2일코스</a></li>
+                    <li><a href="korail_OneDayTour.html">당일코스</a></li>
+                    <li><a href="korail_JoenbukTour.html">전북패스코스</a></li>
+                    <li><a href="korail_SaemangeumTour.html">새만금</a></li>
+                </ul>
+            </li>
+                <li class='sub-menu'> <a href="#">커뮤니티<i class='fa fa-angle-down'></i></a>
+                    <ul>
+                        <li><a href="Notice.html">공지사항</a></li>
+                        <li><a href="#">자주 묻는 질문</a></li>
+                        <li><a href="#">여행후기</a></li>
+                    
+                    </ul>
+                </li>
+                <li class='sub-menu'> <a href="#">홍보영상<i class='fa fa-angle-down'></i></a>
+                    <ul>
+                        <li><a href="#">홍보영상</a></li>
+                      
+                    </ul>
+                </li>
+        </ul>
+    </div>
+</nav>
+
+<script src="http://code.jquery.com/jquery-1.12.4.min.js"></script>
+<script>
+    $('nav li').hover(
+        function() {
+            $('ul', this).stop().slideDown(200);
+        },
+        function() {
+            $('ul', this).stop().slideUp(200);
+        }
+    );
+</script>
+
+<div class="grid-container">
+    <div class="grid-item header"></div>
+  <div class="grid-item aside">
+     <!-- 왼쪽 서브 메뉴 -->
+        <div class="left_sub_menu">
+            <div class="sub_menu">
+                <input type="search" name="SEARCH" placeholder="SEARCH">
+                <h2><a href="index.html">TITLE</a></h2>
+                <ul class="big_menu">
+                    <li>도내 운행 코스 <i class="arrow fas fa-angle-right"></i></li>
+                    <ul class="small_menu">
+                        <li><a href="#">전체</a></li>
+                        <li><a href="#">고창/부안</a></li>
+                        <li><a href="#">무주/진안</a></li>
+                        <li><a href="#">임실/진안</a></li>
+                        <li><a href="#">장수/남원</a></li>
+                        <li><a href="#">익산/완주</a></li>
+                        <li><a href="#">정읍/김제</a></li>
+                        <li><a href="#">임실/순창</a></li>
+                        <li><a href="#">전주/군산</a></li>
+                        <li><a href="#">전북투어패스</a></li>
+                        <li><a href="#">새만금코스</a></li>
+                    </ul>
+                </ul>
+                <ul class="big_menu">
+                    <li> 도내 특별 코스 <i class="arrow fas fa-angle-right"></i></li>
+                    <ul class="small_menu">
+                        <li><a href="#">전체</a></li>
+                        <li><a href="#">아태마스터스</a></li>
+                        <li><a href="#">MZ 코스</a></li>
+                        <li><a href="#">겨울 코스</a></li>
+                        <li><a href="#">실버 코스</a></li>
+                        <li><a href="#">축제&생태</a></li>
+                    </ul>
+                </ul>
+                <ul class="big_menu">
+                    <li>경상권 출발 <i class="arrow fas fa-angle-right"></i></li>
+                    <ul class="small_menu">
+                        <li><a href="Gyeongsang_1and2.html">1박2일코스</a></li>
+                        <li><a href="Gyeongsang_OneDayTour.html">당일코스</a></li>
+                        <li><a href="Gyeongsang_SaemangeumTour.html">새만금코스</a></li>
+                    </ul>
+                </ul>
+                <ul class="big_menu">
+                    <li>수도권 출발 <i class="arrow fas fa-angle-right"></i></li>
+                    <ul class="small_menu">
+                        <li><a href="Metropolitan_area_1and2.html">1박2일코스</a></li>
+                        <li><a href="Metropolitan_area_OneDayTour,html">당일코스</a></li>
+                        <li><a href="Metropolitan_area_JoenbukTour.html">전북투어패스</a></li>
+                        <li><a href="Metropolitan_area_SaemangeumTour.html">새만금코스</a></li>
+                    </ul>
+                </ul>
+                <ul class="big_menu">
+                    <li>코레일 연계 <i class="arrow fas fa-angle-right"></i></li>
+                    <ul class="small_menu">
+                        <li><a href="korail_1and2.html">1박2일코스</a></li>
+                        <li><a href="korail_OneDayTour.html">당일코스</a></li>
+                        <li><a href="korail_JoenbukTour.html">전북투어패스</a></li>
+                        <li><a href="korail_SaemangeumTour.html">새만금코스</a></li>
+                    </ul>
+                </ul>
+                <ul class="big_menu">
+                    <li>커뮤니티<i class="arrow fas fa-angle-right"></i></li>
+                    <ul class="small_menu">
+                        <li><a href="#">공지사항</a></li>
+                        <li><a href="#">자주 묻는 질문</a></li>
+                        <li><a href="#">여행후기</a></li>
+                    </ul>
+                </ul>
+                <ul class="big_menu">
+                    <li> 홍보영상 <i class="arrow fas fa-angle-right"></i></li>
+                    <ul class="small_menu">
+                        <li><a href="#">홍보영상</a></li>
+                        
+                    </ul>
+                </ul>
+                
+            </div>
+            
+        </div>
+        <!-- 왼쪽 서브 메뉴 -->
+    </div>
+  <div class="grid-item content">
+<!------------------------------------------------------->
+      <div style="background-color: whitesmoke">
+      <div class="gcontainer">
+          <div class="image" onmouseover="changeImage1()">
+            <img src="img/Gyeongsang/1and2/1.png" alt="Left Image"> 
+          </div>
+        <div class="content-title">무주/ 전주/ 완주/ 익산<br>
+첫째날<br><br>
+부산 출발(서면역)(07:00) - 무주 머루와인동굴, 와인족욕체험(09:40) – 중식(전통전주비빔밥)(12:00) - 전주 한지박물관 한지체험(13:20) – 전주한옥마을(족욕체험&자유관광 및 자유석식)(14:50) - 호텔투숙(18:40)<br><br>
+둘째날<br>
+호텔 출발(07:30) – 조식(콩나물국밥)(07:40) – 완주대둔산 케이블카(09:00) – 자유중식(12:00) – 국립익산박물관&미륵사지(14:00) – 부산 도착(서면역)(20:30)</div>       
+          <div class="small-images">
+              <img src="img/Gyeongsang/1and2/1.png" alt="Right Image 1" onmouseover="changeImage1()">
+          </div>
+        <div class="content-text">
+            
+          
+            <div class="button">
+            <a href="https://www.nbtour.co.kr/Goods/GoodsDetail.asp?code=KIN20221" target="_blank">예약하기</a>
+            </div>
+          
+          </div>
+      </div>  
+          </div>
+<!------------------------------------------------------->
+         <div style="background-color: whitesmoke">
+      <div class="gcontainer">
+         <div class="image1" onmouseover="changeImage2()">
+            <img src="img/Gyeongsang/1and2/2.png" alt="Left Image"> 
+         </div>
+        <div class="content-title">장수/ 전주/ 순창/ 남원<br>
+첫째날<br><br>
+부산 출발(서면역)(07:00) – 장안산 덕산계곡(10:00) – 중식(전통 전주비빔밥)(12:30) – 전주한지박물관 체험(13:40) – 전주한옥마을 및 족욕/ 자유관광 / 자유석식(15:00) – 호텔 투숙(18:40)<br><br>
+둘째날<br>
+호텔 출발(07:30) – 조식(콩나물국밥)(07:40) – 순창 강천산(09:30) – 자유중식(11:30) – 순창체계산출렁다리(13:00) – 남원광한루(15:00) – 부산 도착(서면역)(20:00)</div>       
+          <div class="small-images1">
+            <img src="img/Gyeongsang/1and2/2.png" alt="Right Image 1" onmouseover="changeImage2()">
+
+          </div>
+        <div class="content-text">
+            
+          
+            <div class="button">
+            <a href="https://www.nbtour.co.kr/Goods/GoodsDetail.asp?code=KIN20225"target="_blank">예약하기</a>
+            </div>
+          
+          </div>
+      </div>  
+          </div> 
+<!------------------------------------------------------->
+               <div style="background-color: whitesmoke">
+      <div class="gcontainer">
+         <div class="image2" onmouseover="changeImage3()">
+            <img src="img/Gyeongsang/1and2/3.png" alt="Left Image"> 
+         </div>
+        <div class="content-title">진안/ 전주/ 김제/ 고창<br>
+첫째날<br><br>
+부산 출발(서면역)(07:00) – 마이산(09:30) – 중식(전통 전주비빔밥)(12:00) - 한지박물관 한지체험(13:20) - 전주한옥마을 및 한복체험, 족욕체험(14:50) – 자유석식(17:30) - 호텔투숙(18:40)<br><br>
+둘째날<br>
+호텔 출발(07:30) –조식(콩나물국밥)(07:40) – 김제 금산사(09:00) – 자유중식(12:30) – 고창 선운사(14:30) – 부산 도착(서면역)(20:00)</div>       
+          <div class="small-images2">
+            <img src="img/Gyeongsang/1and2/3.png" alt="Right Image 1" onmouseover="changeImage3()">
+
+          </div>
+        <div class="content-text">
+          
+          
+            <div class="button">
+            <a href="https://www.nbtour.co.kr/Goods/GoodsDetail.asp?code=KIN20226"target="_blank">예약하기</a>
+            </div>
+          
+          </div>
+      </div>  
+          </div>
+<!-------------------------------------------------------> 
+               <div style="background-color: whitesmoke">
+      <div class="gcontainer">
+         <div class="image3" onmouseover="changeImage4()">
+            <img src="img/Gyeongsang/1and2/4.png" alt="Left Image"> 
+         </div>
+        <div class="content-title">임실/ 전주/ 정읍/ 부안<br>
+첫째날<br><br>
+부산 출발(서면역)(07:00) – 임실 치즈 테마 파크 치즈체험(09:40) – 중식(전주비빔밥)(12:00) - 한지박물관 한지체험(13:20) - 전주한옥마을 및 한복체험, 족욕체험(14:50) – 자유석식(17:30) – 호텔 투숙(18:40)<br><br>
+둘째날<br>
+호텔 출발(07:30) – 조식(콩나물국밥)(07:40) – 부안 내소사(10:00) – 자유중식(12:10) – 곰소(13:00) – 고창 선운사(14:20) – 부산 도착(서면역)(20:30)</div>       
+          <div class="small-images3">
+            <img src="img/Gyeongsang/1and2/4.png" alt="Right Image 1" onmouseover="changeImage4()">
+
+          </div>
+        <div class="content-text">
+          
+          
+            <div class="button">
+            <a href="https://www.nbtour.co.kr/Goods/GoodsDetail.asp?code=KIN20227"target="_blank">예약하기</a>
+            </div>
+          
+          </div>
+      </div>  
+          </div>
+      <!------------------------------------------------------->
+               <div style="background-color: whitesmoke">
+      <div class="gcontainer">
+         <div class="image4" onmouseover="changeImage5()">
+            <img src="img/Gyeongsang/1and2/5.png" alt="Left Image"> 
+         </div>
+        <div class="content-title">진안/ 전주/ 부안/ 고창<br>
+첫째날<br><br>
+부산 출발(서면역)(07:30) – 진안 마이산 견학(09:30) – 중식(전주비빔밥)(12:00) – 전주한지박물관(13:20) – 전주 한옥마을(족욕체험&자유관광 및 자유석식)(14:50) – 호텔 숙박(18:40)<br><br>
+둘째날<br>
+호텔 출발(07:30) – 조식(콩나물국밥)(07:40) – 부안 내소사(10:00) – 자유중식(12:10) – 곰소(13:00) – 고창 선운사(14:20) – 부산 도착(서면역)(20:30)</div>       
+          <div class="small-images4">
+            <img src="img/Gyeongsang/1and2/5.png" alt="Right Image 1" onmouseover="changeImage5()">
+            <img src="img/Gyeongsang/1and2/5-1.png" alt="Right Image 2" onmouseover="changeImage5()">
+            <img src="img/Gyeongsang/1and2/5-2.png" alt="Right Image 3" onmouseover="changeImage5()">
+          </div>
+        <div class="content-text">
+            
+          
+            <div class="button">
+            <a href="https://www.nbtour.co.kr/Goods/GoodsDetail.asp?code=KIN202210"target="_blank">예약하기</a>
+            </div>
+          
+          </div>
+      </div>  
+          </div>
+      <!------------------------------------------------------->
+               <div style="background-color: whitesmoke">
+      <div class="gcontainer">
+         <div class="image5" onmouseover="changeImage6()">
+            <img src="img/Gyeongsang/1and2/6.png" alt="Left Image"> 
+         </div>
+        <div class="content-title">진안/ 전주/ 군산<br>
+첫째날<br><br>
+부산 출발(서면역)(07:00) – 진안 마이산 견학(09:30) – 중식(전주비빔밥)(12:00) – 전주한지박물관(13:20) – 전주한옥마을 (족욕체험 &자유관광 및 자유석식)(14:50) – 호텔 숙박(18:40)<br><br>
+둘째날<br>
+호텔 출발(07:30) – 조식(콩나물국밥)(07:40) - 군산 근대역사거리&시간여행&인력거체험(09:30) – 자유중식(12:00) – 새만금방조제&선유도(13:40) – 부산 도착(서면역)(20:00)</div>       
+          <div class="small-images5">
+            <img src="img/Gyeongsang/1and2/6.png" alt="Right Image 1" onmouseover="changeImage6()">
+          </div>
+        <div class="content-text">
+           
+          
+            <div class="button">
+            <a href="https://www.nbtour.co.kr/Goods/GoodsDetail.asp?code=KIN20229"target="_blank">예약하기</a>
+            </div>
+          
+          </div>
+      </div>  
+          </div>
+
+<!-- 사이드바 코드 -->  
+      
+      <script>
+          
+          <!-- 사이드바 스크립트 -->
+        $(function () {
+        // 왼쪽메뉴 드롭다운
+        $(".sub_menu ul.small_menu").hide();
+        $(".sub_menu ul.big_menu").click(function () {
+            $("ul", this).slideToggle(300);
+        });
+        // 외부 클릭 시 좌측 사이드 메뉴 숨기기
+        $('.overlay').on('click', function () {
+            $('.left_sub_menu').fadeOut();
+            $('.hide_sidemenu').fadeIn();
+        });
+    });   
+   <!-- 사이드바 스크립트 -->       
+          
+          
+  function changeImage1() {
+    var leftImage = document.querySelector(".image img");
+    var rightImages = document.querySelectorAll(".small-images img");
+    for (var i = 0; i < rightImages.length; i++) {
+      rightImages[i].onmouseover = function() {
+        leftImage.src = this.src;
+      }
+    }
+  }
+
+  function changeImage2() {
+    var leftImage = document.querySelector(".image1 img");
+    var rightImages = document.querySelectorAll(".small-images1 img");
+    for (var i = 0; i < rightImages.length; i++) {
+      rightImages[i].onmouseover = function() {
+        leftImage.src = this.src;
+      }
+    }
+  }
+          
+            function changeImage3() {
+    var leftImage = document.querySelector(".image2 img");
+    var rightImages = document.querySelectorAll(".small-images2 img");
+    for (var i = 0; i < rightImages.length; i++) {
+      rightImages[i].onmouseover = function() {
+        leftImage.src = this.src;
+      }
+    }
+  }  function changeImage4() {
+    var leftImage = document.querySelector(".image3 img");
+    var rightImages = document.querySelectorAll(".small-images3 img");
+    for (var i = 0; i < rightImages.length; i++) {
+      rightImages[i].onmouseover = function() {
+        leftImage.src = this.src;
+      }
+    }
+  }
+            function changeImage5() {
+    var leftImage = document.querySelector(".image4 img");
+    var rightImages = document.querySelectorAll(".small-images4 img");
+    for (var i = 0; i < rightImages.length; i++) {
+      rightImages[i].onmouseover = function() {
+        leftImage.src = this.src;
+      }
+    }
+  }
+            function changeImage6() {
+    var leftImage = document.querySelector(".image5 img");
+    var rightImages = document.querySelectorAll(".small-images5 img");
+    for (var i = 0; i < rightImages.length; i++) {
+      rightImages[i].onmouseover = function() {
+        leftImage.src = this.src;
+      }
+    }
+  }
+</script>
+      
+    </div> 
+
+    </div>
+</body>
+</html>
